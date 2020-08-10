@@ -1,23 +1,27 @@
 * {
   padding: 0;
   margin: 0;
-  color: black;
 }
 
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-@font-face {
+@font-face{
   font-family: jedi;
   src: url("../assets/fonts/Starjedi.ttf");
 }
 
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   overflow-x: hidden;
-  background-color: black;
+  background-image: url("../assets/lu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
   font-family: jedi;
 }
 
@@ -28,324 +32,231 @@ main {
   align-items: center;
 }
 
-section {
+header {
+  height: 20vh;
+  width: 100%;
+  margin: 45px 0px 10px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+header img {
+  height: 15vh;
+}
+
+main section {
+  background-image: url('../assets/boba.jpg');
+  background-size: contain;
+  width: 80vw;
+  padding: 31px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: jedi, sans-serif;
+  margin-bottom: 30px;
+}
+
+section form {
+  display: flex;
+  flex-direction: column;
+}
+
+section form div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family: jedi, sans-serif;
+}
+
+input {
+  width: 15rem;
+  height: 25px;
+  border-radius: 20px;
+  border: 0;
+  padding-left: 10px;
+}
+
+#form-section-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#photo {
+  position: relative;
+}
+
+#photo img {
+  width: 130px;
+  cursor: pointer;
+}
+#photo #image_preview {
+  width: 130px;
+  height: 130px;
+  border-radius: 80px;
+  border: 2px solid grey;
+}
+
+#photo #btn-preview {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  position: absolute;
+  bottom: 0px;
+  right: 76px;
+  background-color: white;
+  border-radius: 15px;
+  border: 0;
+}
+
+#motivo label {
+  text-align: center;
+}
+
+textarea {
+  resize: none;
+}
+
+#form-section-two {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+  align-items: flex-end;
+  flex-wrap: wrap;
 }
 
-#screenOne {
-  background-image: url("../assets/back.png");
-  background-size: 50vh 50vh;
-  background-repeat: repeat;
-}
-
-header {
-  background-color: black;
-  border: 1px solid white;
-
-  width: 100%;
-  height: 6em;
-
-  box-sizing: border-box;
-
+.input-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-header h1{
-  text-align: center;
-  font-family: jedi, sans-serif;
-  color: white;
-  font-size: 3em;
-  letter-spacing: 3px;
-  text-overflow: clip;
-  white-space: nowrap;
-}
-
-header img{
-  width: 4em;
-  padding: 0 1em;
-}
-
-#screenOne .image-content {
-  width: 100%;
-
-  display: flex;
+#form-section-one .input-container {
   justify-content: center;
+  align-items: center;
+}
+#form-section-two .input-container {
+  width: 15rem;
+}
+
+button[type="submit"] {
+  height: 2rem;
+  padding: 5px 50px;
   margin-top: 20px;
-}
-#screenOne .image-content img {
-  height: 50vh;
-}
-
-#screenOne .button-content {
-  
-  border-radius: 40px;
-  background-color: white;
-
-  padding: 0px 20px;
-  margin-bottom: 7em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#screenOne .button-content a {
-  font-size: 2.5em;
-  text-align: center;
-  font-weight: bold;
-  font-family: jedi, sans-serif;
-  letter-spacing: 2px;
-  font-weight: 300;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-#screenOne .button-content a:hover {
-  color: red;
-}
-
-main .learnMore {
-  position: absolute;
-  top: 40vh;
-  left: 15px;
-  height: 2em;
-
   background-color: black;
-  border-radius: 1em;
-  border: 1px solid white;
-
-  display: flex;
-  align-items: center;
-}
-
-main .learnMore .img-container{
-  border: 3px solid white;
-  border-radius: 17px;
-  margin: 0px 10px 0px 0px;
-  padding: 3px;
-  height: 36px;
-  width: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-sizing: border-box;
-}
-
-main .learnMore img{
-  width: 16px;
-  height: 16px;
-}
-
-main .learnMore a {
+  border-radius: 1rem;
   font-family: jedi, sans-serif;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1.1em;
-  font-weight: bolder;
-  white-space: nowrap;
-  letter-spacing: 2px;
   font-weight: 400;
-
-  margin: 0px 4px 0px 0px;
-}
-
-main .learnMore a:hover {
-  font-style: italic;
-}
-
-
-main .toggleNextPage {
-  position: absolute;
-  bottom: 25px;
-  right: 50px;
-
-  background-color: white;
-  border-radius: 20px;
-
-  display: flex;
-  align-items: center;
-}
-
-main .toggleNextPage img{
-  width: 1.4em;
-  height: 1.4em;
-  margin-right: 10px;
-}
-
-main .toggleNextPage a {
-  font-family: jedi, sans-serif;
-  color: black;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1.1em;
-  font-weight: bolder;
-  white-space: nowrap;
-
-  padding: 2px;
-  margin: 0px 20px;
-
-  display: flex;
-  align-items: center;
-}
-
-main .toggleNextPage a:hover {
-  font-style: italic;
-}
-
-#screenTwo {
-  background-image: url("../assets/back2.jpg");
-  background-size: cover;
-  position: relative;
-}
-
-.shadow {
-  position: absolute;
-  top: 0px;
-  height: 50%;
-  width: 100%;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(255,0,0,0));
-}
-
-#screenTwo .title {
-  z-index: 4;
-  margin-top: 4em;
-}
-
-#screenTwo .title h3 {
+  letter-spacing: 1px;
   color: white;
-  font-size: 2.8em;
-  text-align: center;
 }
 
-#screenTwo .main-content {
-  z-index: 4;
-  overflow-y: scroll;
+@font-face {
+  font-family: jedi;
+  src: url("../assets/fonts/Starjedi.ttf");
+}
 
-  width: 65vw;
-  height: 51vh;
-  margin-bottom: 3em;
-  background-color: rgba(255, 255, 255, 0.582);
+#modal {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  top: 10vh;
+  left: 4vw;
+  border: 5px solid red;
+  border-radius: 40px;
+  font-size: 1.5em;
+}
+
+#modal #title_modal{
+    margin-top: 20px;
+
+}
+
+#modal .img-content {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+#modal .img-content img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 2px solid grey;
+}
+
+#modal .info-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+#modal .info-content .info-content-container {
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  margin-bottom: 15px;
+}
+
+#modal .info-content .info-content-container .info {
+  text-align: start;
+  font-weight: 600;
+  width: 40vw;
+  text-align: left;
+}
+
+#modal .info-content .info-content-container .info-right {
+  overflow-wrap: break-word;
+  max-width: 40vw;
+  width: 35vw;
+  text-align: end;
+}
+
+#modal .info-content .info-content-container #cor_id {
+  width: 100%;
+  height: 60px;
+  background-color: blue;
   border-radius: 20px;
-  scroll-behavior: smooth;
-  font-size: 2em;
-  padding: 40px;
-  font-weight: 500;
-  text-align: justify;
 }
 
-#screenTwo .main-content ol{
-  padding: 60px;
-  text-align: justify;
-}
-
-@media only screen and (max-width: 790px){
-  header img {
-    display: none;
+@media screen and (max-width: 700px) {
+  body {
+    height: 100%;
   }
-  header {
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) and (orientation: landscape) {
+  body {
+    height: 100%;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  header img {
+    height: 20vh;
+  }
+}
+
+@media screen and (min-width: 700px){
+  #modal{
+    width:68vw;
+    left:16vw
+  }
+
+  #modal .info-content {
+    width: 90%;
     justify-content: center;
   }
-
-  #screenTwo .main-content {
-    padding: 1.5em;
-    font-size: 1em;
-  }
-  #screenTwo .main-content ol{
-    padding: 30px;
-  }
 }
-@media only screen and (max-width: 1200px){
-  main .toggleNextPage {
-    bottom: 5px;
-    right: unset;
-    left: unset;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  #screenTwo .title h3 {
-    font-size: 2em;
-    text-align: center;
-  }
-  #screenTwo .main-content {
-    margin-bottom: 1.5em;
-    font-size: 1.5em;
-  }
-
-}
-@media only screen and (max-width: 1000px) and (orientation: landscape){
-  main .toggleNextPage a{
-    font-size: 0.7em;
-  }
-
-  header {
-    height: 4em;
-  }
-
-  header h1 {
-    font-size: 2em;
-  }
-  header img{
-    width: 2.5em;
-  }
-
-}
-
-
-@media only screen and (min-width: 700px) and (orientation: portrait) {
-  
-  #screenOne .image-content img {
-    width: 100%;
-  }
-  
-  main .learnMore a {
-    font-size: 2em;
-  }
-
-  #screenOne .button-content a {
-    font-size: 4em;
-  }
-
-}
-
-@media only screen and (orientation: portrait) {
-  header h1{
-    font-size: 1.5em;
-    white-space: normal;
-  }
-
-  main .learnMore {
-    top: 8em;
-  }
-
-  main .toggleNextPage a{
-    font-size: 0.7em;
-  }
-
-  #screenTwo .main-content {
-    z-index: 4;
-    overflow-y: scroll;
-  
-    width: 70vw;
-    height: 65vh;
-    margin-bottom: 2em;
-    background-color: rgba(255, 255, 255, 0.582);
-    border-radius: 20px;
-    scroll-behavior: smooth;
-    padding: 3em;
-    font-weight: 500;
-    text-align: justify;
-  }
-  
-}
-
