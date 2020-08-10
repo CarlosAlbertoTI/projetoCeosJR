@@ -230,7 +230,7 @@ main .toggleNextPage a:hover {
 #screenTwo .main-content {
   z-index: 4;
   overflow-y: scroll;
-
+  font-family: auto;
   width: 65vw;
   height: 51vh;
   margin-bottom: 3em;
