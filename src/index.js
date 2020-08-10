@@ -70,8 +70,8 @@ function validate(data) {
     return false;
   }
 
-  if (Number(data.salario) < 10000) {
-    alert("So e permitido valores abaixo de 10000 creditos galacticos");
+  if (Number(data.salario) < 1000) {
+    alert("So e permitido valores abaixo de 1000 creditos galacticos");
     return false;
   }
 
