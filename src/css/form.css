@@ -45,9 +45,7 @@ header img {
 }
 
 main section {
-  background-image: url('../assets/boba.jpg');
-  background-size: contain;
-  background-position: right;
+  background-image: white;
   width: 80vw;
   padding: 31px 20px;
   display: flex;
@@ -74,7 +72,7 @@ input {
   width: 15rem;
   height: 25px;
   border-radius: 20px;
-  border: 0;
+  border: 1px solid grey;
   padding-left: 10px;
 }
 
