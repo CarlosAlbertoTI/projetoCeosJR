@@ -45,7 +45,7 @@ header img {
 }
 
 main section {
-  background-image: url('../assets/boba.jpg');
+ background-image: url('../assets/boba.jpg');
   background-size: contain;
   width: 80vw;
   padding: 31px 20px;
