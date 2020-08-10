@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliste-se para o Império</title>
+    <link rel="stylesheet" href="./src/css/form.css">
+</head>
+<body>
+    <header>
+        <img src="./src/assets/Öcone Imperio Davi.png" alt="Empire Icon">
+    </header>
+    <main>
+        <section>
+            <form>
+                <div class="">
+
+                    <div class="form-section" id="form-section-one">
+                        <div class="input-container" id="photo">
+                            <label for="file">
+                                <img id='image_preview' src="./src/assets/image_preview.jpg" alt="Photo">
+                                <img src="./src/assets/btn_preview.png"  id='btn-preview'/>
+                            </label>
+                            <input id="file" type="file" name="file" required onchange="loadFile(event)">
+                        </div>
+                        <div class="input-container" id="motivo">
+                            <label for="Motivo">porquê entrar para o império?</label>
+                            <textarea id="motivo" name="Motivo" rows="6" cols="30" minlength="10" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-section" id="form-section-two">
+                        <div class="input-container"  >
+                            <label for="nome"> seu nome </label>
+                            <input type="text" name="Nome" id="nome" placeholder="Nome" minlength="1"  required>
+                        </div>
+                        <div class="input-container" >
+                            <label for="especie"> sua espécie </label>
+                            <input type="text" name="Especie" id="especie" placeholder="Espécie" minlength="3" required>
+                
+                        </div>
+                        <div class="input-container" >
+                            <label for="idade"> sua idade </label>
+                            <input type="number" name="Idade" id="idade" placeholder="Sua idade"  min="20" required>
+                        </div>
+                        <div class="input-container" >
+                            <label for="idGala"> seu id galáctico </label>
+                            <input type="Number" name="IdGala" id="idGala" placeholder="Ex. 8129-123" min="1" required>
+                        </div>
+                        <div class="input-container" >
+                            <label for="salario"> pretensão de salário </label>
+                            <input type="number" name="Salario" id="salario" placeholder="Salário em milhões" min="1000" required>
+                        </div>
+                        <div class="input-container" id="cor-divisao">
+                            <label for="color">cor da sua divisão</label>
+                            <input type="color" name="color" id="color">
+                        </div>
+                        <div class="input-container" >
+                            <label for="experiencia">possui experiência na área?</label>
+                            <select name="Exp" id="experiencia" required>
+                                <option value="Nenhuma">nenhuma</option>
+                                <option label="Baixa" value="Baixa"></option>
+                                <option label="Razoável" value="Razoável"></option>
+                                <option label="Alta" value="Alta"></option>
+                                <option label="Experiente" value="Experiente"></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" id='btn-submit'>enviar</button>    
+            </form>
+        </section>
+    </main>
+    <section id="modal">
+        <div id="title_modal">
+            <h2>Seus Dados</h2>
+        </div>
+        <div class="img-content">
+            <img alt="#" src='./src/assets/image_preview.jpg' id="image-info" width="100" height="100">
+        </div>
+        <div class="info-content">
+            <div class="info-content-container">
+                <p class="info">Nome</p>
+                <p class="info-right" id="name_id">sdfsdff</p>
+            </div>
+            <div class="info-content-container">
+                <p class="info">Especie</p>
+                <p class="info-right" id="especie_id">sdfsdff</p>
+            </div>
+            <div class="info-content-container">
+                <p class="info">Idade</p>
+                <p class="info-right" id="idade_id">sdfsdff</p>
+            </div>
+            <div class="info-content-container">
+                <p class="info">ID Galactico</p>
+                <p class="info-right" id="galac_id">sdfsdff</p>
+            </div>
+            <div class="info-content-container">
+                <p class="info">Pretensão de Salario</p>
+                <p class="info-right" id="salario_id">sdfsdff</p>
+
+            </div>
+            <div class="info-content-container">
+                <p class="info" id="info-cor">Cor do Equipamento</p>
+                <div class="info-right">
+                    <p id="cor_id"></p>
+                </div>
+            </div>
+            <div class="info-content-container">
+                <p class="info">Experiencia com Armamento ou Equipamento de Guerra</p>
+                <p class="info-right" id="exp_id">sdfsdff</p>
+            </div>
+            <div class="info-content-container">
+                <p class="info">Motivaçāo</p>
+                <p class="info-right" id="motivo_id">sdfsdff</p>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./src/index.js"></script>
+</html>
