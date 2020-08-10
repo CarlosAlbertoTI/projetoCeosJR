@@ -9,9 +9,16 @@ html {
   overflow-x: hidden;
 }
 
+@font-face {
+  font-family: jedi;
+  src: url("../assets/fonts/Starjedi.ttf");
+}
+
+
 body {
   overflow-x: hidden;
   background-color: black;
+  font-family: jedi;
 }
 
 main {
@@ -342,7 +349,3 @@ main .toggleNextPage a:hover {
   
 }
 
-@font-face {
-  font-family: jedi;
-  src: url("../assets/fonts/Starjedi.ttf");
-}
