@@ -1,0 +1,261 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face{
+  font-family: jedi;
+  src: url("../assets/fonts/Starjedi.ttf");
+}
+
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  background-image: url("../assets/lu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  font-family: jedi;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  height: 20vh;
+  width: 100%;
+  margin: 45px 0px 10px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+header img {
+  height: 15vh;
+}
+
+main section {
+  background-color: #ececec;
+  width: 80vw;
+  padding: 31px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: jedi, sans-serif;
+  margin-bottom: 30px;
+}
+
+section form {
+  display: flex;
+  flex-direction: column;
+}
+
+section form div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family: jedi, sans-serif;
+}
+
+input {
+  width: 15rem;
+  height: 25px;
+  border-radius: 20px;
+  border: 0;
+  padding-left: 10px;
+}
+
+#form-section-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#photo {
+  position: relative;
+}
+
+#photo img {
+  width: 130px;
+  cursor: pointer;
+}
+#photo #image_preview {
+  width: 130px;
+  height: 130px;
+  border-radius: 80px;
+  border: 2px solid grey;
+}
+
+#photo #btn-preview {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  position: absolute;
+  bottom: 0px;
+  right: 76px;
+  background-color: white;
+  border-radius: 15px;
+  border: 0;
+}
+
+#motivo label {
+  text-align: center;
+}
+
+textarea {
+  resize: none;
+}
+
+#form-section-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#form-section-one .input-container {
+  justify-content: center;
+  align-items: center;
+}
+#form-section-two .input-container {
+  width: 15rem;
+}
+
+button[type="submit"] {
+  height: 2rem;
+  padding: 5px 50px;
+  margin-top: 20px;
+  background-color: black;
+  border-radius: 1rem;
+  font-family: jedi, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: white;
+}
+
+@font-face {
+  font-family: jedi;
+  src: url("../assets/fonts/Starjedi.ttf");
+}
+
+#modal {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  top: 10vh;
+  left: 4vw;
+  border: 5px solid red;
+  border-radius: 40px;
+  font-size: 1.5em;
+}
+
+#modal #title_modal{
+    margin-top: 20px;
+
+}
+
+#modal .img-content {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+#modal .img-content img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 2px solid grey;
+}
+
+#modal .info-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+#modal .info-content .info-content-container {
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  margin-bottom: 15px;
+}
+
+#modal .info-content .info-content-container .info {
+  text-align: start;
+  font-weight: 600;
+  width: 40vw;
+  text-align: left;
+}
+
+#modal .info-content .info-content-container .info-right {
+  overflow-wrap: break-word;
+  max-width: 40vw;
+  width: 35vw;
+  text-align: end;
+}
+
+#modal .info-content .info-content-container #cor_id {
+  width: 100%;
+  height: 60px;
+  background-color: blue;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    height: 100%;
+  }
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) and (orientation: landscape) {
+  body {
+    height: 100%;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  header img {
+    height: 20vh;
+  }
+}
+
+@media screen and (min-width: 700px){
+  #modal{
+    width:68vw;
+    left:16vw
+  }
+
+  #modal .info-content {
+    width: 90%;
+    justify-content: center;
+  }
+}
